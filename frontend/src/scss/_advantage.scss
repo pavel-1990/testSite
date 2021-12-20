@@ -1,0 +1,61 @@
+.advantage > div {
+    display: grid;
+    // padding-right: 0px !important;
+    justify-content: center;
+    align-items: baseline;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-auto-flow: row;
+    // max-width: 100%;
+    grid-gap: 15px;
+
+    @media (max-width: 579px) {
+        grid-template-columns: auto;
+    }
+
+    .adv_block {
+        max-width: 100%;
+        h3 {
+            font-size: 18px;
+            text-align: left;
+            margin: 0px;
+        }
+        p,
+        li {
+            font-size: 14px;
+            text-align: justify;
+        }
+        p {
+            margin-top: 0px;
+        }
+        display: grid;
+        grid-template-columns: 2.5fr 8fr;
+        // grid-template-rows: 1fr;
+        justify-content: center;
+        // align-items: center;
+        // grid-column-gap: 10px;
+        // grid-gap: 10px;
+        img {
+            max-width: 60% !important;
+            // max-width: 80%;
+            grid-row: 1/3;
+        }
+    }
+}
+@media (min-width: 579px) {
+    .company > div {
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto;
+        .adv_block {
+            grid-template-columns: 1fr;
+            justify-items: center;
+            img {
+                max-width: 30% !important;
+            }
+            p,
+            h3 {
+                text-align: center;
+            }
+        }
+    }
+}

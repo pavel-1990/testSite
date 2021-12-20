@@ -1,0 +1,90 @@
+.hamburger-menu {
+    > input {
+        display: none;
+    }
+    z-index: 6;
+}
+
+.menuToggleV {
+    float: right;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+    > span,
+    > span::before,
+    > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #616161;
+    }
+    > span::before {
+        content: "";
+        top: -8px;
+    }
+    > span::after {
+        content: "";
+        top: 8px;
+    }
+}
+
+.button_green,
+.button_clear {
+    appearance: none;
+    border-radius: 3px;
+    font-family: Open Sans;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 9px 7px;
+    font-weight: bold;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.button_green {
+    background-color: #319f01;
+    color: #fff;
+    border: 0px;
+
+    &:active {
+        background-color: #298601;
+    }
+    &:hover {
+        background-color: #3bbb03;
+    }
+}
+
+.button_clear {
+    border: 1px solid black;
+    background-color: white;
+}
+
+.maps {
+    padding: 32px 0px !important;
+    padding-bottom: 0px !important;
+
+    > ymaps {
+        // height: 400px !important;
+        max-height: 70vh !important;
+        max-width: 100vw;
+    }
+}
+
+h2 {
+    font-family: "Open Sans";
+    line-height: 24.51px;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+}
+
+input {
+    border: silver 1px solid;
+    border-radius: 3px;
+}

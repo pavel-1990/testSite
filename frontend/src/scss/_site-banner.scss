@@ -1,0 +1,56 @@
+$maxWidth: 1280;
+@mixin adaptiv-font($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+.site-banner {
+    font-family: Open Sans;
+    position: relative;
+    padding-left: 0px;
+    padding-right: 0px;
+    .banner-content {
+        height: 100%;
+        z-index: 2;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        > div {
+            // display: inline-block;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    > img {
+        border: none;
+        position: relative;
+        // background-image: url("../img/bannerbanner.jpg");
+        width: 100vw;
+        min-height: 153px;
+        object-fit: cover;
+        // background-repeat: no-repeat;
+        // background-size: auto, auto;
+    }
+
+    h2 {
+        // font-size: calc(24px + 16 * (100vw / 1280));
+        @include adaptiv-font(60, 20);
+        // font-size: 20px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        text-align: left;
+        line-height: initial;
+    }
+
+    p {
+        font-weight: normal;
+        // font-size: 10px;
+        @include adaptiv-font(15, 12);
+        line-height: initial;
+
+        margin-top: 10px;
+        // margin-bottom: 30px;
+        // line-height: 13px;
+    }
+}

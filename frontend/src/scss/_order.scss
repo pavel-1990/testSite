@@ -1,0 +1,56 @@
+.order {
+    background-image: url("../background//background_order.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    > div {
+        padding-top: 45px;
+        padding-bottom: 45px;
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (min-width: 690px) {
+            justify-content: right;
+            .order-form {
+                margin-right: 200px;
+            }
+
+            // padding-right: 50px;
+        }
+        .order-form {
+            // margin: auto;
+            width: max-content;
+            height: max-content;
+
+            background-color: white;
+            padding: 20px;
+            h3 {
+                font-size: 25px;
+                width: 100%;
+            }
+            > * {
+                width: 90%;
+
+                margin: auto;
+                margin-top: 25px;
+                margin-bottom: 25px;
+                display: block;
+                text-align: center;
+            }
+            input {
+                height: 6vh;
+                box-sizing: border-box;
+            }
+            label {
+                height: min-content;
+                input {
+                    width: 8px;
+                    margin: 0px;
+                    height: initial;
+                }
+                font-size: 8px;
+            }
+        }
+    }
+}
